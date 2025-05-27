@@ -1,0 +1,42 @@
+/* /Users/user/git/autopinkstyle.ro/src/App.css */
+.page-transition-wrapper {
+  /* Base styles for the wrapper if any */
+  /* The transform-origin ensures the zoom is centered */
+  overflow: hidden; /* Good for preventing scrollbar flickers or layout shifts during transition */
+}
+
+.page-transition-wrapper.fade-transition-active {
+  animation: fadeOutInEffect 0.4s ease-in-out; /* Matched to App.jsx timeout */
+}
+
+@keyframes fadeOutInEffect {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;        /* Content fades out completely */
+  }
+  /* At 50%, React Router swaps content. New content starts at opacity 0. */
+  100% {
+    opacity: 1;          /* New content fades in */
+  }
+}
+
+/* You can add other global styles here if needed */
+
+/* Animation for the main content area in Layout.jsx */
+.main-content-zoom-in {
+  animation: mainContentZoomInEffect 1s ease-out forwards;
+  transform-origin: center; /* Ensures zoom is centered */
+}
+
+@keyframes mainContentZoomInEffect {
+  from {
+    opacity: 0.1;
+    transform: scale(0.1);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
