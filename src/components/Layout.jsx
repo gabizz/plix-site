@@ -68,10 +68,7 @@ export default function Layout({children}) {
       </header>
       <main className="flex-grow flex flex-col bg-stone-50 text-gray-700 main-content-zoom-in relative">
 
-<div
-  className="absolute inset-0 z-0 bg-repeat bg-contain bg-center opacity-100"
-  style={{ backgroundImage: `url(${bkgUrl})` }}
-/>
+
         {children}
       </main>
       <footer className="bg-gray-200 text-gray-600 text-center p-4 text-sm sm:text-md font-normal sm:font-bold z-10">

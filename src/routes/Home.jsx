@@ -20,7 +20,7 @@ export default function Home() {
         <h2 className="text-sm sm:text-lg font-normal text-gray-500 py-4">
           TIPĂRIRE PLICURI - CONFIRMĂRI DE PRIMIRE - BORDEROURI DE EXPEDIȚIE
         </h2>
-        <a href = "https://print.plix.ro" className="cursor-pointer">
+        <a href = "https://print.plix.ro">
         <button type="button" className="cursor-pointer bg-blue-700 text-white text-2xl sm:text-3xl font-bold  px-10 py-5 rounded-md hover:bg-blue-800 transition duration-300 shadow-md hover:shadow-lg">
           ACCES APLICAȚIE
         </button>
