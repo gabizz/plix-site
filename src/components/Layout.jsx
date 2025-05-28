@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { MdClose, MdMenu } from "react-icons/md"; // MdHome was imported but not used.
 import signLogo from "../assets/signlogo.svg"
-import bkgUrl from '../assets/bkg2.svg'; // without ?url
+import backgroundImage from '../assets/bkg.jpeg'; // without ?url
 
 export default function Layout({children}) {
 
@@ -66,12 +66,18 @@ export default function Layout({children}) {
           )}
         </nav>
       </header>
-      <main className="flex-grow flex flex-col bg-stone-50 text-gray-700 main-content-zoom-in relative">
+<main className="relative flex-grow flex flex-col bg-stone-50 text-gray-700 main-content-zoom-in overflow-hidden">
+  {/* Background image */}
+  <div
+    className="absolute inset-0 -z-10 bg-cover bg-center opacity-30 "
+    style={{ backgroundImage: `url(${backgroundImage})` }}
+  />
 
-
-        {children}
-      </main>
-      <footer className="bg-gray-200 text-gray-600 text-center p-4 text-sm sm:text-md font-normal sm:font-bold z-10">
+  <div className="flex-grow flex flex-col">
+    {children}
+  </div>
+</main>
+      <footer className="bg-white text-gray-600 text-center p-4 text-sm sm:text-md font-normal sm:font-bold z-10">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className='flex flex-wrap justify-center items-center space-x-3'>
           <img src = {signLogo} className='w-3/12 sm:w-1/12'/>
